@@ -1,570 +1,560 @@
 <!DOCTYPE html>
-<html lang="ar">
+ <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="مكتبة رقمية متكاملة تحتوي على كتب إلكترونية، دورات تعليمية، موارد تصميم، و15 مليون منتج رقمي لتعزيز مشاريعك.">
-  <title>المكتبة الرقمية</title>
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- Google Fonts (Tajawal) -->
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    /* General Styles */
-    body {
-      font-family: 'Tajawal', sans-serif;
-      background: linear-gradient(135deg, #e6f0ff, #d4e2ff, #f5e6ff);
-      color: #333;
-      line-height: 1.6;
-      padding: 1rem;
-      direction: rtl;
-      margin: 0;
-      position: relative;
-      overflow-x: hidden;
-    }
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="مكتبة رقمية متكاملة تحتوي على كتب إلكترونية، دورات تعليمية، موارد تصميم، و15 مليون منتج رقمي لتعزيز مشاريعك." name="description"/>
+<title>المكتبة الرقمية</title>
+<!-- Font Awesome for icons -->
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" referrerpolicy="no-referrer" rel="stylesheet"/>
+<!-- Google Fonts (Tajawal) -->
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<style>  
+    /* General Styles */  
+    body {  
+      font-family: 'Tajawal', sans-serif;  
+      background: linear-gradient(135deg, #e6f0ff, #d4e2ff, #f5e6ff);  
+      color: #333;  
+      line-height: 1.6;  
+      padding: 1rem;  
+      direction: rtl;  
+      margin: 0;  
+      position: relative;  
+      overflow-x: hidden;  
+    }  body::before {  
+  content: '';  
+  position: absolute;  
+  top: 0;  
+  left: 0;  
+  width: 100%;  
+  height: 100%;  
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.15)" d="M0,192L48,197.3C96,203,192,213,288,197.3C384,181,480,139,576,138.7C672,139,768,181,864,192C960,203,1056,181,1152,165.3C1248,149,1344,139,1392,133.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');  
+  background-size: cover;  
+  opacity: 0.3;  
+  z-index: -1;  
+}  
 
-    body::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.15)" d="M0,192L48,197.3C96,203,192,213,288,197.3C384,181,480,139,576,138.7C672,139,768,181,864,192C960,203,1056,181,1152,165.3C1248,149,1344,139,1392,133.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
-      background-size: cover;
-      opacity: 0.3;
-      z-index: -1;
-    }
+@media (min-width: 768px) {  
+  body {  
+    padding: 1.5rem;  
+  }  
+}  
 
-    @media (min-width: 768px) {
-      body {
-        padding: 1.5rem;
-      }
-    }
+h1 {  
+  text-align: center;  
+  color: #fff;  
+  background: linear-gradient(to right, #3b0764, #a21caf);  
+  padding: 1.2rem;  
+  border-radius: 20px;  
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  
+  margin: 1rem auto 2rem;  
+  font-size: 1.8rem;  
+  max-width: 600px;  
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
+  gap: 0.5rem;  
+}  
 
-    h1 {
-      text-align: center;
-      color: #fff;
-      background: linear-gradient(to right, #3b0764, #a21caf);
-      padding: 1.2rem;
-      border-radius: 20px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      margin: 1rem auto 2rem;
-      font-size: 1.8rem;
-      max-width: 600px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-    }
+h1 .icon {  
+  font-size: 1.5rem;  
+}  
 
-    h1 .icon {
-      font-size: 1.5rem;
-    }
+h2 {  
+  color: #1a3c34;  
+  margin-bottom: 1rem;  
+  display: flex;  
+  align-items: center;  
+  gap: 0.5rem;  
+  font-size: 1.4rem;  
+}  
 
-    h2 {
-      color: #1a3c34;
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 1.4rem;
-    }
+/* Filter Buttons */  
+.filter-buttons {  
+  display: flex;  
+  justify-content: center;  
+  gap: 0.8rem;  
+  margin: 1.5rem auto;  
+  flex-wrap: wrap;  
+  max-width: 90%;  
+}  
 
-    /* Filter Buttons */
-    .filter-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 0.8rem;
-      margin: 1.5rem auto;
-      flex-wrap: wrap;
-      max-width: 90%;
-    }
+.filter-buttons button {  
+  padding: 0.7rem 1.8rem;  
+  border: none;  
+  border-radius: 15px;  
+  background: linear-gradient(to right, #3b0764, #a21caf);  
+  color: #fff;  
+  font-weight: bold;  
+  font-size: 1rem;  
+  cursor: pointer;  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);  
+}  
 
-    .filter-buttons button {
-      padding: 0.7rem 1.8rem;
-      border: none;
-      border-radius: 15px;
-      background: linear-gradient(to right, #3b0764, #a21caf);
-      color: #fff;
-      font-weight: bold;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
+.filter-buttons button:hover {  
+  transform: translateY(-3px);  
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);  
+}  
 
-    .filter-buttons button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-    }
+.filter-buttons button.active {  
+  background: linear-gradient(to right, #a21caf, #3b0764);  
+  transform: scale(1.05);  
+}  
 
-    .filter-buttons button.active {
-      background: linear-gradient(to right, #a21caf, #3b0764);
-      transform: scale(1.05);
-    }
+/* Section Styles */  
+.section {  
+  background: linear-gradient(135deg, #ffffff, #f9fafb);  
+  border: 2px solid transparent;  
+  border-radius: 15px;  
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);  
+  padding: 1.5rem;  
+  margin: 1.5rem auto;  
+  max-width: 1200px;  
+  transition: transform 0.3s ease;  
+}  
 
-    /* Section Styles */
-    .section {
-      background: linear-gradient(135deg, #ffffff, #f9fafb);
-      border: 2px solid transparent;
-      border-radius: 15px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-      padding: 1.5rem;
-      margin: 1.5rem auto;
-      max-width: 1200px;
-      transition: transform 0.3s ease;
-    }
+.section:hover {  
+  transform: translateY(-5px);  
+}  
 
-    .section:hover {
-      transform: translateY(-5px);
-    }
+/* Unique Colors for Each Section */  
+.million-products {   
+  border-color: #FFD700;   
+  background: linear-gradient(135deg, #FFF8DC, #FFD700);   
+  box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);  
+  position: relative;  
+  overflow: hidden;  
+}  
+.million-products::before {  
+  content: '✨ مميز';  
+  position: absolute;  
+  top: -20px;  
+  right: -60px;  
+  background: #b91c1c;  
+  color: #fff;  
+  padding: 8px 50px;  
+  transform: rotate(45deg);  
+  font-size: 0.9rem;  
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);  
+}  
+.ebooks { border-color: #2dd4bf; background: linear-gradient(135deg, #ccfbf1, #99f6e4); }  
+.courses { border-color: #3b82f6; background: linear-gradient(135deg, #dbeafe, #bfdbfe); }  
+.design-resources { border-color: #a855f7; background: linear-gradient(135deg, #f3e8ff, #d8b4fe); }  
+.software { border-color: #ec4899; background: linear-gradient(135deg, #fce7f3, #f9a8d4); }  
 
-    /* Unique Colors for Each Section */
-    .million-products { 
-      border-color: #FFD700; 
-      background: linear-gradient(135deg, #FFF8DC, #FFD700); 
-      box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
-      position: relative;
-      overflow: hidden;
-    }
-    .million-products::before {
-      content: '✨ مميز';
-      position: absolute;
-      top: -20px;
-      right: -60px;
-      background: #b91c1c;
-      color: #fff;
-      padding: 8px 50px;
-      transform: rotate(45deg);
-      font-size: 0.9rem;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-    .ebooks { border-color: #2dd4bf; background: linear-gradient(135deg, #ccfbf1, #99f6e4); }
-    .courses { border-color: #3b82f6; background: linear-gradient(135deg, #dbeafe, #bfdbfe); }
-    .design-resources { border-color: #a855f7; background: linear-gradient(135deg, #f3e8ff, #d8b4fe); }
-    .software { border-color: #ec4899; background: linear-gradient(135deg, #fce7f3, #f9a8d4); }
+/* Resource Grid */  
+.resource-grid {  
+  display: grid;  
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));  
+  gap: 1.2rem;  
+  margin-top: 1rem;  
+}  
 
-    /* Resource Grid */
-    .resource-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.2rem;
-      margin-top: 1rem;
-    }
+.resource-card {  
+  background: #fff;  
+  border-radius: 10px;  
+  padding: 1rem;  
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);  
+  transition: transform 0.3s ease;  
+}  
 
-    .resource-card {
-      background: #fff;
-      border-radius: 10px;
-      padding: 1rem;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
+.resource-card:hover {  
+  transform: translateY(-3px);  
+}  
 
-    .resource-card:hover {
-      transform: translateY(-3px);
-    }
+.resource-card a {  
+  color: #1a3c34;  
+  font-weight: bold;  
+  text-decoration: none;  
+  display: flex;  
+  align-items: center;  
+  gap: 0.6rem;  
+  font-size: 0.95rem;  
+}  
 
-    .resource-card a {
-      color: #1a3c34;
-      font-weight: bold;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-size: 0.95rem;
-    }
+.resource-card p {  
+  font-size: 0.85rem;  
+  color: #555;  
+  margin-top: 0.5rem;  
+}  
 
-    .resource-card p {
-      font-size: 0.85rem;
-      color: #555;
-      margin-top: 0.5rem;
-    }
+/* Million Products Section Specific Styles */  
+.million-products .highlighted {  
+  position: relative;  
+  background: linear-gradient(to right, #FFD700, #FFA500);  
+  color: #fff;  
+  font-weight: bold;  
+  padding: 1rem 1.5rem;  
+  border-radius: 15px;  
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);  
+  border: 2px solid #FFFACD;  
+  animation: pulse 2s infinite;  
+  font-size: 1rem;  
+  display: flex;  
+  align-items: center;  
+  gap: 0.6rem;  
+}  
 
-    /* Million Products Section Specific Styles */
-    .million-products .highlighted {
-      position: relative;
-      background: linear-gradient(to right, #FFD700, #FFA500);
-      color: #fff;
-      font-weight: bold;
-      padding: 1rem 1.5rem;
-      border-radius: 15px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
-      border: 2px solid #FFFACD;
-      animation: pulse 2s infinite;
-      font-size: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
+.million-products .password-box {  
+  background: linear-gradient(to right, #FFFACD, #FFE4B5);  
+  padding: 1.2rem;  
+  border-radius: 12px;  
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);  
+  text-align: center;  
+  margin-top: 1rem;  
+}  
 
-    .million-products .password-box {
-      background: linear-gradient(to right, #FFFACD, #FFE4B5);
-      padding: 1.2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-      text-align: center;
-      margin-top: 1rem;
-    }
+.million-products .password-box a {  
+  background: #b91c1c;  
+  color: #fff;  
+  padding: 0.7rem 1.2rem;  
+  border-radius: 10px;  
+  font-weight: bold;  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  
+  font-size: 0.9rem;  
+}  
 
-    .million-products .password-box a {
-      background: #b91c1c;
-      color: #fff;
-      padding: 0.7rem 1.2rem;
-      border-radius: 10px;
-      font-weight: bold;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      font-size: 0.9rem;
-    }
+.million-products .password-box a:hover {  
+  transform: scale(1.05);  
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);  
+}  
 
-    .million-products .password-box a:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
+/* Link Styles */  
+a {  
+  display: flex;  
+  align-items: center;  
+  gap: 0.6rem;  
+  color: #1a3c34;  
+  background: #ffffff;  
+  padding: 0.6rem 1.2rem;  
+  border-radius: 10px;  
+  margin: 0.6rem 0;  
+  text-decoration: none;  
+  font-weight: bold;  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);  
+  font-size: 0.95rem;  
+}  
 
-    /* Link Styles */
-    a {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      color: #1a3c34;
-      background: #ffffff;
-      padding: 0.6rem 1.2rem;
-      border-radius: 10px;
-      margin: 0.6rem 0;
-      text-decoration: none;
-      font-weight: bold;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      font-size: 0.95rem;
-    }
+a:hover {  
+  transform: translateY(-3px);  
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);  
+  background: #e0f2f1;  
+}  
 
-    a:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      background: #e0f2f1;
-    }
+a:focus {  
+  outline: 2px solid #3b0764;  
+  outline-offset: 2px;  
+}  
 
-    a:focus {
-      outline: 2px solid #3b0764;
-      outline-offset: 2px;
-    }
+a i {  
+  font-size: 1.1rem;  
+  transition: transform 0.3s ease;  
+}  
 
-    a i {
-      font-size: 1.1rem;
-      transition: transform 0.3s ease;
-    }
+a:hover i {  
+  transform: scale(1.15);  
+}  
 
-    a:hover i {
-      transform: scale(1.15);
-    }
+/* Paragraph Styles */  
+p {  
+  font-size: 0.9rem;  
+  background-color: #f1f8e9;  
+  padding: 0.6rem 1.2rem;  
+  border-left: 4px solid #8bc34a;  
+  margin: 0.8rem 0;  
+  border-radius: 8px;  
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);  
+}  
 
-    /* Paragraph Styles */
-    p {
-      font-size: 0.9rem;
-      background-color: #f1f8e9;
-      padding: 0.6rem 1.2rem;
-      border-left: 4px solid #8bc34a;
-      margin: 0.8rem 0;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
+/* Back to Top Button */  
+#backToTop {  
+  position: fixed;  
+  bottom: 20px;  
+  left: 20px;  
+  display: none;  
+  padding: 12px;  
+  background: linear-gradient(to right, #3b0764, #a21caf);  
+  color: white;  
+  border: none;  
+  border-radius: 50%;  
+  cursor: pointer;  
+  font-size: 1.2rem;  
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);  
+  transition: transform 0.3s ease, opacity 0.3s ease;  
+}  
 
-    /* Back to Top Button */
-    #backToTop {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      display: none;
-      padding: 12px;
-      background: linear-gradient(to right, #3b0764, #a21caf);
-      color: white;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      font-size: 1.2rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease, opacity 0.3s ease;
-    }
+#backToTop:hover {  
+  transform: scale(1.1);  
+  opacity: 0.9;  
+}  
 
-    #backToTop:hover {
-      transform: scale(1.1);
-      opacity: 0.9;
-    }
+/* Screen Reader Only */  
+.sr-only {  
+  position: absolute;  
+  width: 1px;  
+  height: 1px;  
+  padding: 0;  
+  margin: -1px;  
+  overflow: hidden;  
+  clip: rect(0, 0, 0, 0);  
+  border: 0;  
+}  
 
-    /* Screen Reader Only */
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      border: 0;
-    }
+/* Animations */  
+@keyframes pulse {  
+  0% { transform: scale(1); }  
+  50% { transform: scale(1.03); }  
+  100% { transform: scale(1); }  
+}
 
-    /* Animations */
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.03); }
-      100% { transform: scale(1); }
-    }
-  </style>
+  
+.resource-card a {
+  animation: bounce 2s infinite;
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+</style>
 </head>
 <body>
-  <!-- Header -->
-  <h1>
-    <span class="sr-only">المكتبة الرقمية</span>
-    <span class="icon">📚</span> المكتبة الرقمية <span class="icon">💻</span>
-  </h1>
-
-  <!-- Filter Buttons -->
-  <div class="filter-buttons">
-    <button onclick="filterSection('all')">الكل</button>
-    <button onclick="filterSection('million-products')">15 مليون منتج رقمي</button>
-    <button onclick="filterSection('ebooks')">كتب إلكترونية</button>
-    <button onclick="filterSection('courses')">دورات تعليمية</button>
-    <button onclick="filterSection('design-resources')">موارد تصميم</button>
-    <button onclick="filterSection('software')">برامج وموارد أخرى</button>
-  </div>
-
-  <!-- 15 Million Products Section -->
-  <div class="section million-products">
-    <h2><i class="fas fa-star"></i> 15 مليون منتج رقمي</h2>
-    <a href="https://rtx12.my.canva.site/white-purple-simple-minimalist-email-checklist-worksheet" aria-label="مجموعة 15 مليون منتج رقمي" class="highlighted">
-      <i class="fas fa-gift"></i> 15 مليون منتج رقمي
+<!-- Header -->
+<h1>
+<span class="sr-only">المكتبة الرقمية</span>
+<span class="icon">📚</span> المكتبة الرقمية <span class="icon">💻</span>
+</h1> <!-- Filter Buttons --> <div class="filter-buttons">
+<button onclick="filterSection('all')">الكل</button>
+<button onclick="filterSection('million-products')">15 مليون منتج رقمي</button>
+<button onclick="filterSection('ebooks')">كتب إلكترونية</button>
+<button onclick="filterSection('courses')">دورات تعليمية</button>
+<button onclick="filterSection('design-resources')">موارد تصميم</button>
+<button onclick="filterSection('software')">برامج وموارد أخرى</button>
+</div> <!-- 15 Million Products Section --> <div class="section million-products">
+<h2><i class="fas fa-star"></i> 15 مليون منتج رقمي</h2>
+<a aria-label="مجموعة 15 مليون منتج رقمي" class="highlighted" href="https://rtx12.my.canva.site/white-purple-simple-minimalist-email-checklist-worksheet" style="background-color: #f59e0b; color: white;">
+<i class="fas fa-gift"></i> 15 مليون منتج رقمي  
     </a>
-    <p>اكتشف مجموعة ضخمة تضم 15 مليون منتج رقمي لتعزيز مشاريعك الإبداعية والتجارية!</p>
-    <div class="password-box">
-      <p>✅ كلمة السر للوصول إلى المجموعة:</p>
-      <a href="#" onclick="alert('كلمة السر: fexyl.com')" aria-label="عرض كلمة السر">اضغط لعرض كلمة السر</a>
-    </div>
-  </div>
-
-  <!-- E-books Section -->
-  <div class="section ebooks">
-    <h2><i class="fas fa-book-open"></i> كتب إلكترونية</h2>
-    <div class="resource-grid">
-      <div class="resource-card">
-        <a href="https://www.mediafire.com/file/g2spi8fgl91k50u/The_Java_Learning_Guide.rar/file" aria-label="كتاب تعليمي في JavaScript">
-          <i class="fas fa-book"></i> كتاب JavaScript
+<p>اكتشف مجموعة ضخمة تضم 15 مليون منتج رقمي لتعزيز مشاريعك الإبداعية والتجارية!</p>
+<div class="password-box">
+<p>✅ كلمة السر للوصول إلى المجموعة:</p>
+<a aria-label="عرض كلمة السر" href="#" onclick="alert('كلمة السر: fexyl.com')">اضغط لعرض كلمة السر</a>
+</div>
+</div> <!-- E-books Section --> <div class="section ebooks">
+<h2><i class="fas fa-book-open"></i> كتب إلكترونية</h2>
+<div class="resource-grid">
+<div class="resource-card">
+<a aria-label="كتاب تعليمي في JavaScript" href="https://www.mediafire.com/file/g2spi8fgl91k50u/The_Java_Learning_Guide.rar/file" style="background-color: #2dd4bf; color: white;">
+<i class="fas fa-book"></i> كتاب JavaScript  
         </a>
-        <p>دليل شامل لتعلم JavaScript (PDF).</p>
-      </div>
-      <div class="resource-card">
-        <a href="https://drive.google.com/file/d/1EXqTovtpEqo-jpZPnkHwtc4DUZM6Lz3O/view?usp=drivesdk" aria-label="دليل ChatGPT">
-          <i class="fas fa-book"></i> دليل ChatGPT
+<p>دليل شامل لتعلم JavaScript (PDF).</p>
+</div>
+<div class="resource-card">
+<a aria-label="دليل ChatGPT" href="https://drive.google.com/file/d/1EXqTovtpEqo-jpZPnkHwtc4DUZM6Lz3O/view?usp=drivesdk" style="background-color: #2dd4bf; color: white;">
+<i class="fas fa-book"></i> دليل ChatGPT  
         </a>
-        <p>كتاب عن استخدام ChatGPT بفعالية (PDF).</p>
-      </div>
-      <div class="resource-card">
-        <a href="https://drive.google.com/file/d/1E_J6tGa4ME2m2tWgZxdaL8GQZqF4KcYG/view?usp=drivesdk" aria-label="50 Prompt لـ ChatGPT">
-          <i class="fas fa-lightbulb"></i> 50 Prompts لـ ChatGPT
+<p>كتاب عن استخدام ChatGPT بفعالية (PDF).</p>
+</div>
+<div class="resource-card">
+<a aria-label="50 Prompt لـ ChatGPT" href="https://drive.google.com/file/d/1E_J6tGa4ME2m2tWgZxdaL8GQZqF4KcYG/view?usp=drivesdk" style="background-color: #2dd4bf; color: white;">
+<i class="fas fa-lightbulb"></i> 50 Prompts لـ ChatGPT  
         </a>
-        <p>مجموعة من الـ Prompts لتحسين استخدام ChatGPT (PDF).</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Courses Section -->
-  <div class="section courses">
-    <h2><i class="fas fa-graduation-cap"></i> دورات تعليمية</h2>
-    <div class="resource-grid">
-      <div class="resource-card">
-        <a href="https://drive.google.com/drive/u/0/folders/1brCoO_zw35rYXXLvrMarMkaNWj5CzPpC" aria-label="دورة متكاملة في التجارة الإلكترونية تغطي 10 محاور">
-          <i class="fas fa-shopping-cart"></i> دورة التجارة الإلكترونية
+<p>مجموعة من الـ Prompts لتحسين استخدام ChatGPT (PDF).</p>
+</div>
+</div>
+</div> <!-- Courses Section --> <div class="section courses">
+<h2><i class="fas fa-graduation-cap"></i> دورات تعليمية</h2>
+<div class="resource-grid">
+<div class="resource-card">
+<a aria-label="دورة متكاملة في التجارة الإلكترونية تغطي 10 محاور" href="https://drive.google.com/drive/u/0/folders/1brCoO_zw35rYXXLvrMarMkaNWj5CzPpC" style="background-color: #3b82f6; color: white;">
+<i class="fas fa-shopping-cart"></i> دورة التجارة الإلكترونية  
         </a>
-        <p>دورة شاملة تغطي 10 محاور في التجارة الإلكترونية (فيديو).</p>
-      </div>
-      <div class="resource-card">
-        <a href="https://drive.google.com/drive/folders/1Yb5wndl6NIyTYAcKvwS53ACA021Upswp" aria-label="دورة تعليمية في إعلانات فيسبوك وإنستغرام">
-          <i class="fas fa-bullhorn"></i> إعلانات فيسبوك وإنستغرام
+<p>دورة شاملة تغطي 10 محاور في التجارة الإلكترونية (فيديو).</p>
+</div>
+<div class="resource-card">
+<a aria-label="دورة تعليمية في إعلانات فيسبوك وإنستغرام" href="https://drive.google.com/drive/folders/1Yb5wndl6NIyTYAcKvwS53ACA021Upswp" style="background-color: #3b82f6; color: white;">
+<i class="fas fa-bullhorn"></i> إعلانات فيسبوك وإنستغرام  
         </a>
-        <p>تعلم التسويق المدفوع عبر فيسبوك وإنستغرام (فيديو).</p>
-      </div>
-      <div class="resource-card">
-        <a href="https://mega.nz/folder/81Izza5T#XC_eqi41oJ99wlvdp5WJyQ" aria-label="دورة تصميم مواقع للتجار على YouCan">
-          <i class="fas fa-globe"></i> تصميم مواقع على YouCan
+<p>تعلم التسويق المدفوع عبر فيسبوك وإنستغرام (فيديو).</p>
+</div>
+<div class="resource-card">
+<a aria-label="دورة تصميم مواقع للتجار على YouCan" href="https://mega.nz/folder/81Izza5T#XC_eqi41oJ99wlvdp5WJyQ" style="background-color: #3b82f6; color: white;">
+<i class="fas fa-globe"></i> تصميم مواقع على YouCan  
         </a>
-        <p>دورة لتصميم مواقع التجارة الإلكترونية (فيديو).</p>
-      </div>
-      <div class="resource-card">
-        <a href="https://www.mediafire.com/file/lvkbge49e16hezz/Freelancing.rar/file" aria-label="دورة شاملة في العمل الحر وFreelancing">
-          <i class="fas fa-briefcase"></i> دورة العمل الحر
+<p>دورة لتصميم مواقع التجارة الإلكترونية (فيديو).</p>
+</div>
+<div class="resource-card">
+<a aria-label="دورة شاملة في العمل الحر وFreelancing" href="https://www.mediafire.com/file/lvkbge49e16hezz/Freelancing.rar/file" style="background-color: #3b82f6; color: white;">
+<i class="fas fa-briefcase"></i> دورة العمل الحر  
         </a>
-        <p>دورة شاملة عن العمل الحر وFreelancing (فيديو).</p>
-      </div>
-      <div class="resource-card">
-        <a href="https://www.mediafire.com/file/b5hbm0zyyjzmv01/Adobe_Xd_Arabic_Course.rar/file" aria-label="دورة تعليمية في UI/UX باستخدام Adobe XD بالعربية">
-          <i class="fas fa-paint-brush"></i> UI/UX - Adobe XD
+<p>دورة شاملة عن العمل الحر وFreelancing (فيديو).</p>
+</div>
+<div class="resource-card">
+<a aria-label="دورة تعليمية في UI/UX باستخدام Adobe XD بالعربية" href="https://www.mediafire.com/file/b5hbm0zyyjzmv01/Adobe_Xd_Arabic_Course.rar/file" style="background-color: #3b82f6; color: white;">
+<i class="fas fa-paint-brush"></i> UI/UX - Adobe XD  
         </a>
-        <p>تعلم تصميم واجهات المستخدم باستخدام Adobe XD (فيديو).</p>
-      </div>
-      <div class="resource-card">
-        <a href="https://www.mediafire.com/file/rp6l3vnvnt00a5j/1M_prompts1.xlsx/file" aria-label="مليون Prompt لـ Midjourney">
-          <i class="fas fa-lightbulb"></i> مليون Prompt لـ Midjourney
+<p>تعلم تصميم واجهات المستخدم باستخدام Adobe XD (فيديو).</p>
+</div>
+<div class="resource-card">
+<a aria-label="مليون Prompt لـ Midjourney" href="https://www.mediafire.com/file/rp6l3vnvnt00a5j/1M_prompts1.xlsx/file" style="background-color: #3b82f6; color: white;">
+<i class="fas fa-lightbulb"></i> مليون Prompt لـ Midjourney  
         </a>
-        <p>مجموعة ضخمة من الـ Prompts لـ Midjourney (Excel).</p>
-      </div>
-      <div class="resource-card">
-        <a href="https://drive.google.com/drive/u/0/mobile/folders/10IVA0wv2x69ugkJZxwTh3iedQmaC1PIs" aria-label="دورة تعليمية في HTML وCSS">
-          <i class="fab fa-html5"></i> HTML & CSS
+<p>مجموعة ضخمة من الـ Prompts لـ Midjourney (Excel).</p>
+</div>
+<div class="resource-card">
+<a aria-label="دورة تعليمية في HTML وCSS" href="https://drive.google.com/drive/u/0/mobile/folders/10IVA0wv2x69ugkJZxwTh3iedQmaC1PIs" style="background-color: #3b82f6; color: white;">
+<i class="fab fa-html5"></i> HTML &amp; CSS  
         </a>
-        <p>دورة لتعلم تصميم المواقع باستخدام HTML وCSS (فيديو).</p>
-      </div>
-      <div class="resource-card">
-        <a href="https://bit.ly/3F47ooO" aria-label="دورة كاملة في JavaScript">
-          <i class="fab fa-js"></i> JavaScript - كورس كامل
+<p>دورة لتعلم تصميم المواقع باستخدام HTML وCSS (فيديو).</p>
+</div>
+<div class="resource-card">
+<a aria-label="دورة كاملة في JavaScript" href="https://bit.ly/3F47ooO" style="background-color: #3b82f6; color: white;">
+<i class="fab fa-js"></i> JavaScript - كورس كامل  
         </a>
-        <p>دورة متقدمة في JavaScript (فيديو).</p>
-      </div>
-      <div class="resource-card">
-        <a href="https://drive.google.com/drive/folders/1V637kX8pzrip52eX1INlVBHZwP4NdCVV" aria-label="دورة تصميم المواقع والربح منها">
-          <i class="fas fa-laptop-code"></i> تصميم المواقع والربح
+<p>دورة متقدمة في JavaScript (فيديو).</p>
+</div>
+<div class="resource-card">
+<a aria-label="دورة تصميم المواقع والربح منها" href="https://drive.google.com/drive/folders/1V637kX8pzrip52eX1INlVBHZwP4NdCVV" style="background-color: #3b82f6; color: white;">
+<i class="fas fa-laptop-code"></i> تصميم المواقع والربح  
         </a>
-        <p>تعلم تصميم المواقع وكيفية الربح منها (فيديو).</p>
-      </div>
-      <div class="resource-card">
-        <a href="https://drive.google.com/drive/folders/1AGZUKPbQ1z_6EbF1xRf0szhf8EIHFB5d" aria-label="دورة تعليمية في Blender للتصميم ثلاثي الأبعاد">
-          <i class="fas fa-cube"></i> Blender - 3D
+<p>تعلم تصميم المواقع وكيفية الربح منها (فيديو).</p>
+</div>
+<div class="resource-card">
+<a aria-label="دورة تعليمية في Blender للتصميم ثلاثي الأبعاد" href="https://drive.google.com/drive/folders/1AGZUKPbQ1z_6EbF1xRf0szhf8EIHFB5d" style="background-color: #3b82f6; color: white;">
+<i class="fas fa-cube"></i> Blender - 3D  
         </a>
-        <p>دورة لتعلم التصميم ثلاثي الأبعاد باستخدام Blender (فيديو).</p>
-      </div>
-      <div class="resource-card">
-        <a href="https://mega.nz/folder/9rgDFbQT#n05RPj8lUpsO5Tmtxsgf5A" aria-label="دورة تعليمية في PowerPoint">
-          <i class="fas fa-file-powerpoint"></i> PowerPoint
+<p>دورة لتعلم التصميم ثلاثي الأبعاد باستخدام Blender (فيديو).</p>
+</div>
+<div class="resource-card">
+<a aria-label="دورة تعليمية في PowerPoint" href="https://mega.nz/folder/9rgDFbQT#n05RPj8lUpsO5Tmtxsgf5A" style="background-color: #3b82f6; color: white;">
+<i class="fas fa-file-powerpoint"></i> PowerPoint  
         </a>
-        <p>دورة لإنشاء عروض تقديمية احترافية (فيديو).</p>
-      </div>
-      <div class="resource-card">
-        <a href="https://drive.google.com/drive/folders/1pJehPE4OHAplkNNaPcnwbaq3ZSINBqNL" aria-label="دورة تعليمية في CapCut لتحرير الفيديو">
-          <i class="fas fa-mobile-alt"></i> CapCut
+<p>دورة لإنشاء عروض تقديمية احترافية (فيديو).</p>
+</div>
+<div class="resource-card">
+<a aria-label="دورة تعليمية في CapCut لتحرير الفيديو" href="https://drive.google.com/drive/folders/1pJehPE4OHAplkNNaPcnwbaq3ZSINBqNL" style="background-color: #3b82f6; color: white;">
+<i class="fas fa-mobile-alt"></i> CapCut  
         </a>
-        <p>تعلم تحرير الفيديو باستخدام CapCut (فيديو).</p>
-      </div>
-      <div class="resource-card">
-        <a href="https://drive.google.com/drive/folders/13C5Li3jCc2FzOgFK6BsZkXYETLYNSCzZ" aria-label="دورة تعليمية في Adobe Premiere">
-          <i class="fas fa-film"></i> Adobe Premiere
+<p>تعلم تحرير الفيديو باستخدام CapCut (فيديو).</p>
+</div>
+<div class="resource-card">
+<a aria-label="دورة تعليمية في Adobe Premiere" href="https://drive.google.com/drive/folders/13C5Li3jCc2FzOgFK6BsZkXYETLYNSCzZ" style="background-color: #3b82f6; color: white;">
+<i class="fas fa-film"></i> Adobe Premiere  
         </a>
-        <p>دورة لتحرير الفيديو باستخدام Adobe Premiere (فيديو).</p>
-      </div>
-      <div class="resource-card">
-        <a href="https://www.mediafire.com/file/dth1md4rvhng9rr/Adobe_Illustrator_Arabic_Course.rar/file" aria-label="دورة تعليمية في Adobe Illustrator">
-          <i class="fas fa-vector-square"></i> Adobe Illustrator
+<p>دورة لتحرير الفيديو باستخدام Adobe Premiere (فيديو).</p>
+</div>
+<div class="resource-card">
+<a aria-label="دورة تعليمية في Adobe Illustrator" href="https://www.mediafire.com/file/dth1md4rvhng9rr/Adobe_Illustrator_Arabic_Course.rar/file" style="background-color: #3b82f6; color: white;">
+<i class="fas fa-vector-square"></i> Adobe Illustrator  
         </a>
-        <p>تعلم التصميم الجرافيكي باستخدام Illustrator (فيديو).</p>
-      </div>
-      <div class="resource-card">
-        <a href="https://drive.google.com/drive/folders/12j8YhYUx99WaObhnE99hyMIAkFOhHOiV" aria-label="دورة تعليمية في Canva للتصميم الجرافيكي">
-          <i class="fas fa-paint-brush"></i> Canva
+<p>تعلم التصميم الجرافيكي باستخدام Illustrator (فيديو).</p>
+</div>
+<div class="resource-card">
+<a aria-label="دورة تعليمية في Canva للتصميم الجرافيكي" href="https://drive.google.com/drive/folders/12j8YhYUx99WaObhnE99hyMIAkFOhHOiV" style="background-color: #3b82f6; color: white;">
+<i class="fas fa-paint-brush"></i> Canva  
         </a>
-        <p>دورة لإنشاء تصاميم باستخدام Canva (فيديو).</p>
-      </div>
-      <div class="resource-card">
-        <a href="https://drive.google.com/drive/u/0/folders/1eo96g_GX6XXClhJGdn1o0pLNYCpQakFt" aria-label="دورة تعليمية في Photoshop">
-          <i class="fas fa-image"></i> Photoshop
+<p>دورة لإنشاء تصاميم باستخدام Canva (فيديو).</p>
+</div>
+<div class="resource-card">
+<a aria-label="دورة تعليمية في Photoshop" href="https://drive.google.com/drive/u/0/folders/1eo96g_GX6XXClhJGdn1o0pLNYCpQakFt" style="background-color: #3b82f6; color: white;">
+<i class="fas fa-image"></i> Photoshop  
         </a>
-        <p>تعلم تحرير الصور باستخدام Photoshop (فيديو).</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Design Resources Section -->
-  <div class="section design-resources">
-    <h2><i class="fas fa-paint-brush"></i> موارد تصميم</h2>
-    <div class="resource-grid">
-      <div class="resource-card">
-        <a href="https://drive.google.com/file/d/1AkyyR1oYVuPjzgzOfFUqWtfHBpzHHtNG/view" aria-label="ملف موارد التصميم">
-          <i class="fas fa-folder-open"></i> ملف موارد التصميم
+<p>تعلم تحرير الصور باستخدام Photoshop (فيديو).</p>
+</div>
+</div>
+</div> <!-- Design Resources Section --> <div class="section design-resources">
+<h2><i class="fas fa-paint-brush"></i> موارد تصميم</h2>
+<div class="resource-grid">
+<div class="resource-card">
+<a aria-label="ملف موارد التصميم" href="https://drive.google.com/file/d/1AkyyR1oYVuPjzgzOfFUqWtfHBpzHHtNG/view" style="background-color: #a855f7; color: white;">
+<i class="fas fa-folder-open"></i> ملف موارد التصميم  
         </a>
-        <p>مجموعة موارد للتصميم الجرافيكي (ZIP).</p>
-      </div>
-      <div class="resource-card">
-        <a href="https://drive.google.com/drive/folders/17XjKkjNAWujw_8IqpHe_3kgYPrrGcU7u" aria-label="أصول فيديو بحجم 30 جيجا">
-          <i class="fas fa-video"></i> أصول فيديو - 30 جيجا
+<p>مجموعة موارد للتصميم الجرافيكي (ZIP).</p>
+</div>
+<div class="resource-card">
+<a aria-label="أصول فيديو بحجم 30 جيجا" href="https://drive.google.com/drive/folders/17XjKkjNAWujw_8IqpHe_3kgYPrrGcU7u" style="background-color: #a855f7; color: white;">
+<i class="fas fa-video"></i> أصول فيديو - 30 جيجا  
         </a>
-        <p>موارد فيديو عالية الجودة للمونتاج (ZIP).</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Software Section -->
-  <div class="section software">
-    <h2><i class="fas fa-desktop"></i> برامج وموارد أخرى</h2>
-    <div class="resource-grid">
-      <div class="resource-card">
-        <a href="https://drive.google.com/drive/folders/1pf2e_n70lMi9psFjnP8-ldRDr3oGw8Dw" aria-label="مجموعة برامج ضخمة">
-          <i class="fas fa-desktop"></i> مجموعة برامج ضخمة
+<p>موارد فيديو عالية الجودة للمونتاج (ZIP).</p>
+</div>
+</div>
+</div> <!-- Software Section --> <div class="section software">
+<h2><i class="fas fa-desktop"></i> برامج وموارد أخرى</h2>
+<div class="resource-grid">
+<div class="resource-card">
+<a aria-label="مجموعة برامج ضخمة" href="https://drive.google.com/drive/folders/1pf2e_n70lMi9psFjnP8-ldRDr3oGw8Dw" style="background-color: #ec4899; color: white;">
+<i class="fas fa-desktop"></i> مجموعة برامج ضخمة  
         </a>
-        <p>مجموعة برامج للتصميم والبرمجة (ZIP).</p>
-      </div>
-      <div class="resource-card">
-        <a href="https://drive.google.com/file/d/1a2VjebNJgtRxoIBRigVCu0FTfTcfTg2N/view?usp=sharing" aria-label="الحزمة الإبداعية بحجم 300 تيرابايت">
-          <i class="fas fa-lightbulb"></i> الحزمة الإبداعية - 300 تيرابايت
+<p>مجموعة برامج للتصميم والبرمجة (ZIP).</p>
+</div>
+<div class="resource-card">
+<a aria-label="الحزمة الإبداعية بحجم 300 تيرابايت" href="https://drive.google.com/file/d/1a2VjebNJgtRxoIBRigVCu0FTfTcfTg2N/view?usp=sharing" style="background-color: #ec4899; color: white;">
+<i class="fas fa-lightbulb"></i> الحزمة الإبداعية - 300 تيرابايت  
         </a>
-        <p>مجموعة ضخمة من الموارد الإبداعية (ZIP).</p>
-      </div>
-      <div class="resource-card">
-        <a href="https://drive.google.com/file/d/1OsrbcwJDsiDCrBBi-PA7bAXi5gFV92Hb/view?usp=sharing" aria-label="أدوات WhatsApp">
-          <i class="fab fa-whatsapp"></i> أدوات WhatsApp
+<p>مجموعة ضخمة من الموارد الإبداعية (ZIP).</p>
+</div>
+<div class="resource-card">
+<a aria-label="أدوات WhatsApp" href="https://drive.google.com/file/d/1OsrbcwJDsiDCrBBi-PA7bAXi5gFV92Hb/view?usp=sharing" style="background-color: #ec4899; color: white;">
+<i class="fab fa-whatsapp"></i> أدوات WhatsApp  
         </a>
-        <p>أدوات لتحسين استخدام WhatsApp (ZIP).</p>
-      </div>
-      <div class="resource-card">
-        <a href="https://mega.nz/file/4WEmjYjK#XZHbETSt6ozjSDtX7OKXZ28DyT8kdrMbJur1oxdsMVM" aria-label="قوالب Excel وموارد">
-          <i class="fas fa-table"></i> قوالب Excel + موارد
+<p>أدوات لتحسين استخدام WhatsApp (ZIP).</p>
+</div>
+<div class="resource-card">
+<a aria-label="قوالب Excel وموارد" href="https://mega.nz/file/4WEmjYjK#XZHbETSt6ozjSDtX7OKXZ28DyT8kdrMbJur1oxdsMVM" style="background-color: #ec4899; color: white;">
+<i class="fas fa-table"></i> قوالب Excel + موارد  
         </a>
-        <p>مجموعة قوالب Excel للإدارة والتخطيط (Excel).</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Back to Top Button -->
-  <button onclick="topFunction()" id="backToTop" title="العودة للأعلى"><i class="fas fa-arrow-up"></i></button>
-
-  <!-- JavaScript -->
-  <script>
-    // Filter Functionality
-    function filterSection(category) {
-      const sections = document.querySelectorAll('.section');
-      const buttons = document.querySelectorAll('.filter-buttons button');
-
-      // Remove active class from all buttons
-      buttons.forEach(btn => btn.classList.remove('active'));
-
-      // Add active class to the clicked button
-      const activeButton = Array.from(buttons).find(btn => btn.onclick.toString().includes(category));
-      if (activeButton) activeButton.classList.add('active');
-
-      // Show/hide sections based on category
-      sections.forEach(section => {
-        if (category === 'all') {
-          section.style.display = 'block';
-        } else {
-          section.style.display = section.classList.contains(category) ? 'block' : 'none';
-        }
-      });
-    }
-
-    // Initialize with 'all' filter active
-    document.addEventListener('DOMContentLoaded', () => {
-      filterSection('all');
-    });
-
-    // Back to Top Functionality
-    window.onscroll = function () {
-      const backToTop = document.getElementById('backToTop');
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        backToTop.style.display = 'block';
-      } else {
-        backToTop.style.display = 'none';
-      }
-    };
-
-    function topFunction() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  </script>
-</body>
-</html>
+<p>مجموعة قوالب Excel للإدارة والتخطيط (Excel).</p>
+</div>
+</div>
+</div> <!-- Back to Top Button --> <button id="backToTop" onclick="topFunction()" title="العودة للأعلى"><i class="fas fa-arrow-up"></i></button>
+<!-- JavaScript --> <script>  
+    // Filter Functionality  
+    function filterSection(category) {  
+      const sections = document.querySelectorAll('.section');  
+      const buttons = document.querySelectorAll('.filter-buttons button');  
+  
+      // Remove active class from all buttons  
+      buttons.forEach(btn => btn.classList.remove('active'));  
+  
+      // Add active class to the clicked button  
+      const activeButton = Array.from(buttons).find(btn => btn.onclick.toString().includes(category));  
+      if (activeButton) activeButton.classList.add('active');  
+  
+      // Show/hide sections based on category  
+      sections.forEach(section => {  
+        if (category === 'all') {  
+          section.style.display = 'block';  
+        } else {  
+          section.style.display = section.classList.contains(category) ? 'block' : 'none';  
+        }  
+      });  
+    }  
+  
+    // Initialize with 'all' filter active  
+    document.addEventListener('DOMContentLoaded', () => {  
+      filterSection('all');  
+    });  
+  
+    // Back to Top Functionality  
+    window.onscroll = function () {  
+      const backToTop = document.getElementById('backToTop');  
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {  
+        backToTop.style.display = 'block';  
+      } else {  
+        backToTop.style.display = 'none';  
+      }  
+    };  
+  
+    function topFunction() {  
+      window.scrollTo({ top: 0, behavior: 'smooth' });  
+    }  
+  </script> </body>
+</html> 
